@@ -21,12 +21,23 @@ function App() {
     }
 
 
+    function deleteNote(id) {
+
+        setNotes(prevItems => {
+            return prevItems.filter((notes, index) => {
+                return index !== id;
+
+            })
+
+        })
+    }
+
     return <div>
         <Header />
         <InputArea addNote={addNote} />
 
-        {notes.map((notes,index) =>{return <Note key={index} id={index} title={notes.title} content={notes.content} />}
-            
+        {notes.map((notes, index) => { return <Note key={index} id={index} title={notes.title} content={notes.content} onDelete={deleteNote} /> }
+
         )}
 
 

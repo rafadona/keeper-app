@@ -26,13 +26,14 @@ function InputArea(props) {
             <textarea name="content" placeholder="Escreva algo..." rows="5" onChange={handleChange} value={note.content}></textarea>
             <button 
             onClick={(event)=>{
-            props.addNote(note)                     
+            props.addNote(note) 
+            setNote({
+                title:"",
+                content:""
+            })                    
             event.preventDefault();
             
-        }}
-        
-        >
-        Add</button>
+        }}> Add</button>
         </form>
 
     </div>
