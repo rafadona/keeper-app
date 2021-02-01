@@ -10,34 +10,23 @@ import InputArea from "./InputArea"
 function App() {
 
 
-    const [title, setTitle] = React.useState([]);
-    const [content, setContent] = React.useState([]);
+    const [notes, setNotes] = React.useState([]);
 
 
-    function addTitle(title) {
+    function addNote(note) {
 
-        setTitle(prevItems => {
-            return [...prevItems, title];
+        setNotes(prevItems => {
+            return [...prevItems, note];
         });
     }
-
-    function addContent(content) {
-
-        setContent(prevItems => {
-            return [...prevItems, content];
-        });
-    }
-
-
 
 
     return <div>
         <Header />
-        <InputArea addTitle={addTitle} addContent={addContent} />
+        <InputArea addNote={addNote} />
 
-        {title.map((titulo, index) =>
-            <Note
-                key={index} id={index} title={titulo} content={content} />
+        {notes.map((notes,index) =>{return <Note key={index} id={index} title={notes.title} content={notes.content} />}
+            
         )}
 
 
