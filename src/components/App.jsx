@@ -5,13 +5,8 @@ import Note from "./Note"
 import InputArea from "./InputArea"
 
 
-
-
 function App() {
-
-
     const [notes, setNotes] = React.useState([]);
-
 
     function addNote(note) {
 
@@ -19,7 +14,6 @@ function App() {
             return [...prevItems, note];
         });
     }
-
 
     function deleteNote(id) {
 
@@ -40,12 +34,9 @@ function App() {
 
         )}
 
-
         <Footer />
 
     </div>
-
-
 
 
 }

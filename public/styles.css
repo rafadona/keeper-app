@@ -37,7 +37,7 @@ footer p {
 }
 .note {
   background: #fff;
-  border-radius: 7px;
+  border-radius: 8px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
   width: 240px;
@@ -74,7 +74,7 @@ form {
   background: #fff;
   padding: 15px;
   border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  box-shadow: 0 8px 5px rgb(138, 137, 137);
 }
 form input,
 form textarea {
